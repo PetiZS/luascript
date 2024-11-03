@@ -1,5 +1,7 @@
 local plr = game.Players.LocalPlayer
 
+if game.Players.LocalPlayer:FindFirstChild("BuildABoutAutoGrindGui1") ~= nil and game.Players.LocalPlayer:FindFirstChild("BuildABoutAutoGrindGui1"):FindFirstChild("ButtonBackground"):FindFirstChild("AutoGringToggle").BackgroundColor3 == Color3.new(0,0.7,0) then warn("Button Must Be Turned Off!!!") return end
+
 local on = false
 
 if game.Players.LocalPlayer:FindFirstChild("BuildABoutAutoGrindGui1") ~= nil then game.Players.LocalPlayer:FindFirstChild("BuildABoutAutoGrindGui1"):Destroy() end
@@ -13,6 +15,7 @@ frame.Size = UDim2.fromScale(0.2,0.2)
 frame.AnchorPoint = Vector2.new(1,0)
 frame.BackgroundColor3 = Color3.new(0,0,0)
 frame.Position = UDim2.fromScale(1,0)
+frame.Name = "ButtonBackground"
 
 local uidragdetector = Instance.new("UIDragDetector",frame)
 
@@ -29,6 +32,7 @@ button1.AnchorPoint = Vector2.new(0.5,0.5)
 button1.Position = UDim2.fromScale(0.5,0.5)
 button1.BackgroundColor3 = Color3.new(0.7,0,0)
 button1.TextColor3 = Color3.new(0,0,0)
+button1.Name = "AutoGringToggle"
 
 local ResetOnBodyPartLost
 local TheFunction
@@ -41,7 +45,7 @@ button1.MouseButton1Up:Connect(function()
 	if on == false then
 		on = true 
 		button1.BackgroundColor3 = Color3.new(0,0.7,0)
-		
+
 		ResetOnBodyPartLost = task.spawn(function()
 			while true do
 				for i, v in ipairs(plr.Character:GetChildren()) do
@@ -58,7 +62,7 @@ button1.MouseButton1Up:Connect(function()
 				task.wait()
 			end
 		end)
-		
+
 		TheFunction = task.spawn(function()
 			while true do
 				task.wait(2)
