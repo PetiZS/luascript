@@ -2,7 +2,10 @@ local plr = game.Players.LocalPlayer
 
 local on = false
 
+if game.Players.LocalPlayer:FindFirstChild("BuildABoutAutoGrindGui1") ~= nil then game.Players.LocalPlayer:FindFirstChild("BuildABoutAutoGrindGui1"):Destroy() end
+
 local screengui = Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
+screengui.Name = "BuildABoutAutoGrindGui1"
 screengui.ResetOnSpawn = false
 
 local frame = Instance.new("Frame",screengui)
