@@ -1,3 +1,7 @@
+-- Script Originally made by @thereal_asu, discord link has been put down because the "logo" is huge --
+
+-- Modified script of @thereal_asu --
+
 --Configuration
 getgenv().Active = true
 getgenv().Deadzone = 0.1
@@ -21,4 +25,22 @@ note:
 - It takes practice to fly a fpv drone
 - take-off is difficult at first
 - you mustn't let it touch the ground
-]]  
+]]
+
+--[[
+Universal Fpv Drone
+
+▀█████████▄  ▄██   ▄           ▄████████    ▄████████ ███    █▄  
+  ███    ███ ███   ██▄        ███    ███   ███    ███ ███    ███ 
+  ███    ███ ███▄▄▄███        ███    ███   ███    █▀  ███    ███ 
+ ▄███▄▄▄██▀  ▀▀▀▀▀▀███        ███    ███   ███        ███    ███ 
+▀▀███▀▀▀██▄  ▄██   ███      ▀███████████ ▀███████████ ███    ███ 
+  ███    ██▄ ███   ███        ███    ███          ███ ███    ███ 
+  ███    ███ ███   ███        ███    ███    ▄█    ███ ███    ███ 
+▄█████████▀   ▀█████▀         ███    █▀   ▄████████▀  ████████▀  
+                                                                 
+@thereal_asu
+
+server discord
+https://discord.gg/zrAB2m5gvz                                  
+]]
