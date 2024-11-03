@@ -47,7 +47,7 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
 			if not drone then
 				drone = createDrone()
 				
-				DroneSound1 = Instance.new("Sound",drone)
+				DroneSound1 = Instance.new("Sound",workspace)
 				DroneSound1.SoundId = "rbxassetid://97311204743943"
 				DroneSound1.Looped = true
 				DroneSound1.Volume = 0.5
