@@ -1,13 +1,13 @@
 local plr = game.Players.LocalPlayer
 
-if game.Players.LocalPlayer:FindFirstChild("BuildABoutAutoGrindGui1") ~= nil and game.Players.LocalPlayer:FindFirstChild("BuildABoutAutoGrindGui1"):FindFirstChild("ButtonBackground"):FindFirstChild("AutoGringToggle").BackgroundColor3 == Color3.new(0,0.7,0) then warn("Button Must Be Turned Off!!!") return end
+if game.Players.LocalPlayer:FindFirstChild("BuildABoatAutoGrindGui1") ~= nil and game.Players.LocalPlayer:FindFirstChild("BuildABoatAutoGrindGui1"):FindFirstChild("ButtonBackground"):FindFirstChild("AutoGringToggle").BackgroundColor3 == Color3.new(0,0.7,0) then warn("Button Must Be Turned Off!!!") return end
 
 local on = false
 
-if game.Players.LocalPlayer:FindFirstChild("BuildABoutAutoGrindGui1") ~= nil then game.Players.LocalPlayer:FindFirstChild("BuildABoutAutoGrindGui1"):Destroy() end
+if game.Players.LocalPlayer:FindFirstChild("BuildABoatAutoGrindGui1") ~= nil then game.Players.LocalPlayer:FindFirstChild("BuildABoatAutoGrindGui1"):Destroy() end
 
 local screengui = Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
-screengui.Name = "BuildABoutAutoGrindGui1"
+screengui.Name = "BuildABoatAutoGrindGui1"
 screengui.ResetOnSpawn = false
 
 local frame = Instance.new("Frame",screengui)
