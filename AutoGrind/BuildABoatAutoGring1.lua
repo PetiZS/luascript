@@ -123,8 +123,6 @@ local function CreateUpdateWarning()
 	UIAspectRatioConstraint2.AspectRatio = 6
 end
 
-CreateUpdateWarning()
-
 while true do
 	if text ~= tostring(game:HttpGet("https://raw.githubusercontent.com/PetiZS/luascript/refs/heads/main/AutoGrind/BuildABoatAutoGring1.lua")) and text ~= "" then CreateUpdateWarning() end
 	task.wait(5)
