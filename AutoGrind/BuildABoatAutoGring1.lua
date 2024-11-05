@@ -1,4 +1,8 @@
 local plr = game.Players.LocalPlayer
+local text = ""
+pcall(function()
+	text = tostring(game:HttpGet("https://raw.githubusercontent.com/PetiZS/luascript/refs/heads/main/AutoGrind/BuildABoatAutoGring1.lua"))
+end)
 
 if game.Players.LocalPlayer.PlayerGui:FindFirstChild("BuildABoatAutoGrindGui1") ~= nil and game.Players.LocalPlayer.PlayerGui:FindFirstChild("BuildABoatAutoGrindGui1"):FindFirstChild("ButtonBackground"):FindFirstChild("AutoGringToggle").BackgroundColor3 == Color3.new(0,0.7,0) then warn("Button Must Be Turned Off!!!") return end
 
@@ -9,6 +13,7 @@ if game.Players.LocalPlayer.PlayerGui:FindFirstChild("BuildABoatAutoGrindGui1") 
 local screengui = Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
 screengui.Name = "BuildABoatAutoGrindGui1"
 screengui.ResetOnSpawn = false
+screengui.IgnoreGuiInset = true
 
 local frame = Instance.new("Frame",screengui)
 frame.Size = UDim2.fromScale(0.2,0.2)
@@ -106,3 +111,21 @@ button1.MouseButton1Up:Connect(function()
 		plr.Character.PrimaryPart.AssemblyLinearVelocity = Vector3.new(0,0,0)
 	end
 end)
+
+local function CreateUpdateWarning()
+	local UpdateText = Instance.new("TextLabel",screengui)
+	UpdateText.TextScaled = true
+	UpdateText.Size = UDim2.fromScale(0.5,0.5)
+	UpdateText.Position = UDim2.fromScale(0.5,0)
+	UpdateText.AnchorPoint = Vector2.new(0.5,0)
+	UpdateText.Text = "Autogrind Update Avaible!"
+	local UIAspectRatioConstraint2 = Instance.new("UIAspectRatioConstraint",UpdateText)
+	UIAspectRatioConstraint2.AspectRatio = 6
+end
+
+CreateUpdateWarning()
+
+while true do
+	if text ~= tostring(game:HttpGet("https://raw.githubusercontent.com/PetiZS/luascript/refs/heads/main/AutoGrind/BuildABoatAutoGring1.lua")) and text ~= "" then CreateUpdateWarning() end
+	task.wait(5)
+end
