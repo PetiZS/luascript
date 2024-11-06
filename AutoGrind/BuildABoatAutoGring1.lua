@@ -53,7 +53,7 @@ button1.MouseButton1Up:Connect(function()
 
 		ResetOnBodyPartLost = task.spawn(function()
 			while true do
-				if plr.Character:FindFirstAncestorOfClass("Humanoid") ~= nil and plr.Character:FindFirstAncestorOfClass("Humanoid").Sit == true then plr.Character:FindFirstAncestorOfClass("Humanoid").Sit = false end
+				if plr.Character:FindFirstChildOfClass("Humanoid") ~= nil and plr.Character:FindFirstChildOfClass("Humanoid").Sit == true then plr.Character:FindFirstChildOfClass("Humanoid").Sit = false end
 				for i, v in ipairs(plr.Character:GetChildren()) do
 					if v:IsA("BasePart") or v:IsA("MeshPart") then table.insert(BodyParts,v) end
 				end
